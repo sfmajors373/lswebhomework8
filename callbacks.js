@@ -20,21 +20,21 @@
 
 var foods = ['pineapple', 'mango', 'ribeye', 'curry', 'tacos', 'ribeye', 'mango'];
 
-//firstItem(foods, (firstItem) => {
-//  console.log('The first item is ' + firstItem);
-//});
-//var firstItem = (arr, cb) => { 
-//	cb(arr[0]);
-//};
+firstItem(foods, (firstItem) => {
+  console.log('The first item is ' + firstItem);
+});
+var firstItem = (arr, cb) => { 
+	cb(arr[0]);
+};
 
 // Write a function called getLength that passes the length of the array into the callback
 
-getLength(foods, (length) => {
-  console.log('The length of the array is ' + length);
-});
-var length = (foods, cb) => { 
-	cb(foods.length);
-};
+//getLength(foods, (length) => {
+//  console.log('The length of the array is ' + length);
+//});
+//var length = (foods, cb) => { 
+//	cb(foods.length);
+//};
 
 // Write a function called last which passes the last item of the array into the callback
 
