@@ -20,19 +20,19 @@
 
 var foods = ['pineapple', 'mango', 'ribeye', 'curry', 'tacos', 'ribeye', 'mango'];
 
-firstItem(foods, (firstItem) => {
-  console.log('The first item is ' + firstItem);
-});
-var firstItem = (arr, cb) => { 
-	cb(arr[0]);
-};
+//firstItem(foods, (firstItem) => {
+//  console.log('The first item is ' + firstItem);
+//});
+//function firstItem(arr, cb){ 
+//	cb(arr[0]);
+//};
 
 // Write a function called getLength that passes the length of the array into the callback
 
 //getLength(foods, (length) => {
 //  console.log('The length of the array is ' + length);
 //});
-//var length = (foods, cb) => { 
+//function getLength(foods, cb){ 
 //	cb(foods.length);
 //};
 
@@ -41,16 +41,16 @@ var firstItem = (arr, cb) => {
 //last(foods, (lastItem) => {
 //  console.log('The last item in the array is ' + lastItem);
 //});
-//var last = (foods, cb) => {
-//	cb(foods{foods.length - 1]);
+//function last(foods, cb){
+//	cb(foods[foods.length - 1]);
 //	};
 
 // Write a function called sumNums that adds two numbers and passes the result to the callback
 
 //sumNums(5, 10, (sum) => {
 //  console.log('The sum is ' + sum);
-}//);
-//var sumNums = (x, y, cb) => { 
+//});
+//function sumNums(x, y, cb){ 
 //	cb(x + y);
 //};
 
@@ -59,7 +59,7 @@ var firstItem = (arr, cb) => {
 //multiplyNums(5, 10, (product) => {
 //  console.log('The product is ' + product);
 //});
-//var multiplyNums = (x, y, cb) =>{ 
+//function multiplyNums(x, y, cb){ 
 //	cb(x * y);
 //};
 
@@ -69,31 +69,34 @@ var firstItem = (arr, cb) => {
 //contains(foods, 'ribeye', (result) => {
 //  console.log(result ? 'ribeye is in the array' : 'ribeye is not in the array');
 //});
-//var contains = (foods, item, cb) => {
+//function contains(foods, item, cb){
 //	cb(item in foods);
 //};
 
 // Write a function called removeDuplicates that removes all duplicate values from the given array.
 // Pass the array to the callback function.  Do not mutate the original array.
 
-//removeDuplicates(foods, (uniqueFoods) => {
-//  console.log('foods with duplicates removed: ' + uniqueFoods);
-//});
-//var removeDuplicates = (foods, cb) => {
-//	var temp = [];
-//	for(var i = 0; i < foods.length; i++){
-//		if(foods[i] in temp === false){
-//			temp.push(foods[i]);
-//		};
-//	};
-//};
+removeDuplicates(foods, (uniqueFoods) => {
+  console.log('foods with duplicates removed: ' + uniqueFoods);
+});
+function removeDuplicates(foods, cb){
+	var uniqueFoods = [];
+	temp = 0;
+	for(var i = 0; i < foods.length; i++){
+		if(foods[i] in uniqueFoods){
+		} else{
+			uniqueFoods.push(foods[i]);
+		};
+	};
+	cb(uniqueFoods);
+};
 
 // Write a function called forEach that iterates over the provided array and passes the value and index into the callback.
 
 //forEach(foods, (value, index) => {
 //  console.log('${value} is at index ' + index);
 //});
-//var forEach = (foods, cb) => {
+//function forEach(foods, cb){
 //	for(var i = 0; i < foods.length; i++){
 //		cb(foods[i], i);
 //	};
