@@ -80,17 +80,11 @@ removeDuplicates(foods, (uniqueFoods) => {
   console.log('foods with duplicates removed: ' + uniqueFoods);
 });
 function removeDuplicates(foods, cb){
-	var uniqueFoods = [];
-	temp = 0;
-	for(var i = 0; i < foods.length; i++){
-		if(foods[i] in uniqueFoods){
-		} else{
-			uniqueFoods.push(foods[i]);
-		};
-	};
-	cb(uniqueFoods);
-};
-
+	var uniqueFoods = foods.filter(function(elem, pos){
+	return foods.indexOf(elem)==pos;
+});
+  cb(uniqueFoods);
+}
 // Write a function called forEach that iterates over the provided array and passes the value and index into the callback.
 
 //forEach(foods, (value, index) => {
